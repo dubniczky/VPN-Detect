@@ -1,0 +1,7 @@
+### Get my IP address
+GET /getip HTTP/1.1
+HOST: api.ipgeolocation.io
+
+### Get my IP address
+GET /ipgeo?apiKey=_KEY_&ip=_IP_
+HOST: api.ipgeolocation.io
