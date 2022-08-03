@@ -1,6 +1,6 @@
 const API_KEY = '...'
-const IP_URL = `https://api.ipgetlocation.io/getip`
-const LOC_URL = `https://api.ipgetlocation.io/ipgeo?api_key=${API_KEY}&ip=`
+const IP_URL = `https://api.ipgeolocation.io/getip`
+const LOC_URL = `https://api.ipgeolocation.io/ipgeo?api_key=${API_KEY}&ip=`
 
 function getRealLocation() {
     return Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -19,7 +19,7 @@ async function detectVPN() {
     const real = getRealLocation()
     const simulated = await getSimulatedLocation()
     return {
-        vpn: real == simulated,
+        result: real == simulated,
         real,
         simulated
     }
