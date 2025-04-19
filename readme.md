@@ -19,3 +19,10 @@ The way VPN usage is detected is by comparing the time-zone values from the bows
 For IP information acquisition, `ipgeolocation.io` services were used for the demo. In the case of such services, the detection must be done server-side to hide the API key.
 
 Finally, the estimated and the time-zone-based locations are compared. If they match, it's likely the user is not using a VPN (or proxy). Otherwise, in case of a significant difference, the use of a VPN is almost guaranteed, unless the user has misconfigured or purposefully modified the timezone settings of their device or browser.
+
+## References
+
+- Time zone information from: https://data.iana.org/time-zones/tzdb-2021a/zone1970.tab
+- Flag emoji script: https://dev.to/jorik/country-code-to-flag-emoji-a21
+- Time zone docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets
+- Country codes, names and flags: https://gist.github.com/devhammed/78cfbee0c36dfdaa4fce7e79c0d39208
