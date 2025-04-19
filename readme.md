@@ -5,7 +5,7 @@ VPN Detection in the browser using JavaScript
 ## Usage
 
 1. Create an account and copy the API key to `detect.js`: https://ipgeolocation.io
-2. Open the `index.html` page
+2. Open the `main.html` page
 3. Turn on your VPN and switch to another location
 4. Wait for the detection to show the result
 5. Turn off your VPN of choice, then reload the webpage or run `runDetect()` in the console.
