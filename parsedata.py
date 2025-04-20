@@ -10,7 +10,7 @@ with open('data/timezones.txt', 'r') as f:
     for line in f:
         match = re.match(r'([\w,]+)\s+([\w\+\d-]+)\s+([\w\/]+)', line)
         if match:
-            country_code = match.group(1)
+            country_code = match.group(1).split(',')[0] # Handle multiple country codes
             iana = match.group(3)
             timezones[iana] = country_code
         else:
