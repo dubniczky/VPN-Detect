@@ -5,26 +5,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Your Real Location</title>
         <style>
+            body, h1, h2, p {
+                margin: 0;
+                padding: 0;
+            }
+
             body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                color: #333;
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+                color: #fff;
                 text-align: center;
                 padding: 50px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
+
             h1 {
-                font-size: 1.5em;
-                margin-bottom: 20px;
+                font-size: 2em;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
             }
+
             h2 {
-                font-size: 2.5em;
-                color: #555;
+                font-size: 3em;
+                color: #ffeb3b;
+                margin: 20px 0;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
+
             p {
                 font-size: 1.2em;
                 margin-top: 20px;
-                line-height: 1.5;
+                line-height: 1.6;
+                max-width: 600px;
                 text-align: center;
+            }
+
+            a {
+                color: #ffeb3b;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            /* Add a subtle animation */
+            h2 {
+                animation: fadeIn 2s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
             }
         </style>
     </head>
@@ -32,7 +74,7 @@
         <h1>You are in</h1>
         <h2></h2>
         <p>
-            This page uses JavaScript built into your browser to detect your actual home country. It works even when a VPN is enabled and does not require any external services or communication to a server. To find out more, visit: https://github.com/dubniczky/VPN-Detect
+            This page uses JavaScript in your browser to detect your actual home country. It works even when a VPN is enabled and does not require any external services or communication to a host server. To find out more visit the <a href="https://github.com/dubniczky/VPN-Detect" target="_blank">GitHub Repository</a>.
         </p>
     </body>
     <script>
